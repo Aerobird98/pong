@@ -16,7 +16,7 @@ You need [löve2d](https://love2d.org/) version `0.10.2.0` to run or build this 
 - zip all files & rename the zipped folder to a `.love` file extension (if you have löve2d installed, just double click to it)
 - Navigate to `> cd c:/pong` in the console
 - Please note,that you need [löve2d](https://love2d.org/) version `0.10.2.0`, as mentioned above
-- ...and run this command: `> copy /b love.exe + pong.love asteroids.exe`
+- ...and run this command: `> copy /b love.exe + pong.love pong.exe`
 - Then you can hack the `.exe` file properties with [this tool](http://angusj.com/resourcehacker/).
 
 > [this tool](https://mothereff.in/lua-minifier) can minify the scripts, to make them even smaller in size.
