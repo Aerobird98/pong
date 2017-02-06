@@ -27,7 +27,7 @@ TODO list:
 
 This project created just for practice, but if you want, feel free to fork and open a pull request or submit a bug.
 
-- Make ai,
+- Make AI,
 - Improve ball physics,
 - Create menu & let the player choose between game modes (two-player, single-player).
 - etc...
