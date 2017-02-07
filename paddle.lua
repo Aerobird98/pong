@@ -16,11 +16,6 @@ function paddle:add(x,y,a,b,id)
   table.insert(paddle,{x = x,y = y,a = a,b = b,id = id})
 end
 
--- For removing the paddle (in case, if we want it)
-function paddle:remove(i)
-  table.remove(paddle,i)
-end
-
 -- For moving the paddle
 function paddle:move()
   for i,v in ipairs(paddle) do
