@@ -70,8 +70,8 @@ function paddle:move(dt)
 
     -- For keeping the paddle in wiew
     -- up --
-    if v.y > height - self.b then
-      v.y = height - self.b
+    if v.y > height - v.b then
+      v.y = height - v.b
     -- down --
     elseif v.y < 0 then
       v.y = 0
