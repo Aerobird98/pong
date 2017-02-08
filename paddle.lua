@@ -5,7 +5,7 @@ paddle.b = 0 -- height --
 paddle.x = 0
 paddle.y = 0
 paddle.yvel = 0
-paddle.yvelValue = 600
+paddle.yvelValue = 0
 
 -- For adding a new paddle, with an 'x' & 'y' coords,'a' width & 'b' height
 function paddle:add(x,y,a,b,id)
