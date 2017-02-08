@@ -1,27 +1,23 @@
-width = love.graphics.getWidth()
-height = love.graphics.getHeight()
-dt = 0.02
-
 ball = {}
-ball.a = 20 -- width --
-ball.b = ball.a -- height --
-ball.x = width/2
-ball.y = height/2
-ball.xvel = 460
+ball.a = 0 -- width --
+ball.b = 0 -- height --
+ball.x = 0
+ball.y = 0
+ball.xvel = 0
 ball.yvel = 0
 ball.lscore = 0
 ball.rscore = 0
 
 function ball:reset()
-  self.a = self.a -- width --
-  self.b = self.b -- height --
+  self.a = 20 -- width --
+  self.b = self.a -- height --
   self.x = width/2
   self.y = height/2
   self.xvel = 460
   self.yvel = 0
 end
 
-function ball:bounce()
+function ball:bounce(dt)
   -- Get the ball x,y coords, add the corresponding velocity and multiply it with delta time,
   -- this is necessary to move the ball, then we will need to add a value to the velocity
   self.x = self.x + self.xvel * dt

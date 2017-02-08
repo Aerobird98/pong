@@ -4,7 +4,7 @@ I created this game in the weekend just for practice, it is written in lua (enti
 
 Pong is one of the first computer games that ever created, originally developed by Allan Alcorn and released in 1972 by Atari corporations. This simple clone features two paddles and a ball, a player gets score once the opponent misses a ball. The game can be played with two human players, or one player against a computer controlled paddle (AI is still in the TODO list).
 
-- Move the `left` paddle with the `w & s` keys and the `right` one with the `arrow keys(up & down)`,
+- Move the `left-paddle` with the `w & s` keys and the `right-paddle` with the `arrow keys(up & down)`,
 - Press `esc` to quit the game,
 - Press `r` to reset the ball.
 
@@ -23,9 +23,9 @@ You need [löve2d](https://love2d.org/) version `0.10.2.0` to run or build this 
 
 ## Contributing(...)
 
-TODO list:
-
 This project created just for practice, but if you want, feel free to fork and open a pull request or submit a bug.
+
+**TODO list:**
 
 - Make AI,
 - Improve ball physics,

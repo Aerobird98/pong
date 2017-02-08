@@ -1,11 +1,7 @@
-width = love.graphics.getWidth()
-height = love.graphics.getHeight()
-dt = 0.02
-
 paddle = {}
 paddle.id = 0
-paddle.a = 20 -- width --
-paddle.b = 120 -- height --
+paddle.a = 0 -- width --
+paddle.b = 0 -- height --
 paddle.x = 0
 paddle.y = 0
 paddle.yvel = 0
@@ -17,7 +13,7 @@ function paddle:add(x,y,a,b,id)
 end
 
 -- For moving the paddle
-function paddle:move()
+function paddle:move(dt)
   for i,v in ipairs(paddle) do
     -- Get the paddle y coords, add the corresponding velocity and multiply it with delta time,
     -- this is necessary to move the paddle,
