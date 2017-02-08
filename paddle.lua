@@ -79,16 +79,16 @@ function paddle:move(dt)
   end
 end
 
---[[ Ai
--- still to smart ;)
+-- Ai
+--[[ still to smart ;)
 function paddle:ai()
   self.id = 1
-  paddle[self.id].y = ball.y - self.b/2
+  paddle[self.id].y = ball.y - paddle[self.id].b/2
 
   -- For keeping the ai in wiew
   -- up --
-  if paddle[self.id].y > height - self.b then
-    paddle[self.id].y = height - self.b
+  if paddle[self.id].y > height - paddle[self.id].b then
+    paddle[self.id].y = height - paddle[self.id].b
   -- down --
   elseif paddle[self.id].y < 0 then
     paddle[self.id].y = 0
