@@ -6,7 +6,7 @@ Pong is one of the first computer games that ever created, originally developed 
 
 - Move the `left-paddle` with the `w & s` keys and the `right-paddle` with the `arrow keys(up & down)`,
 - Press `esc` to quit the game,
-- Press `r` to reset the ball.
+- Press `r` to reset the ball & clear scores.
 
 You need [löve2d](https://love2d.org/) version `0.10.2.0` to run or build this project
 

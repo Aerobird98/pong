@@ -11,10 +11,16 @@ function love.load()
 
   -- Add paddles
   paddle:add(40,height/2 - 120/2,20,120,2)
-  paddle:add(width - (40 + 20),height/2 - 120/2,20,120,1)
+  paddle:add(width - 60,height/2 - 120/2,20,120,1)
 end
 
 function love.update()
+  -- Specify the window width & height in here to make it responsive --------------
+  width = love.graphics.getWidth()
+  height = love.graphics.getHeight()
+  paddle[2].x = width - 60 -- updtate paddle-right's x position, if resize happens
+  ---------------------------------------------------------------------------------
+
   ball:bounce(dt)
   paddle:move(dt)
   --paddle:ai()
@@ -38,5 +44,7 @@ function love.keypressed(k)
     love.event.quit()
   elseif k == 'r' then
     ball:reset()
+    ball.lscore = 0
+    ball.rscore = 0
   end
 end

@@ -27,6 +27,6 @@ function love.conf(t)
   t.modules.timer = false
   t.modules.touch = true
   t.modules.video = false
-  t.modules.window = true
+  t.modules.window = false
   t.modules.thread = false
 end
