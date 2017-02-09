@@ -6,7 +6,6 @@ function love.load()
   width = love.graphics.getWidth()
   height = love.graphics.getHeight()
   dt = 0.02
-  debug = false
 
   ball:reset()
 
@@ -31,17 +30,7 @@ function love.draw()
   love.graphics.setBackgroundColor(255,255,255) -- White
   love.graphics.setNewFont('Milkshake/Milkshake.ttf',30)
   love.graphics.print(ball.lscore..' :  '..ball.rscore, width/2 - 40, 5)
-  love.graphics.print('v.1.0.1', 5, height - 40)
-
-  -- For debug
-  if debug == true then
-    love.graphics.setColor(0,0,0) -- Black
-    love.graphics.setNewFont('Milkshake/Milkshake.ttf',30)
-    love.graphics.print('> ball-xpos:  '..ball.x,10,10)
-    love.graphics.print('> ball-ypos:  '..ball.y,10,50)
-    love.graphics.print('> ball-xvel:  '..ball.xvel,10,90)
-    love.graphics.print('> ball-yvel:  '..ball.yvel,10,130)
-  end
+  love.graphics.print('v.1.0.2', 5, height - 40)
 end
 
 function love.keypressed(k)
