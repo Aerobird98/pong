@@ -13,13 +13,14 @@ function love.conf(t)
   t.window.resizable = true
   t.window.vsync = true
 
+  -- Add/Remove love2d modules
   t.modules.audio = false
   t.modules.event = true
   t.modules.graphics = true
   t.modules.image = false
   t.modules.joystick = false
   t.modules.keyboard = true
-  t.modules.math = true
+  t.modules.math = false
   t.modules.mouse = false
   t.modules.physics = false
   t.modules.sound = false
