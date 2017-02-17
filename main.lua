@@ -36,7 +36,7 @@ function love.draw()
   love.graphics.setBackgroundColor(255,255,255) -- White
   love.graphics.setNewFont('Milkshake/Milkshake.ttf',30)
   love.graphics.print(ball.lscore..' :  '..ball.rscore, width/2 - 40, 5)
-  love.graphics.print('v.1.0.2', 5, height - 40)
+  love.graphics.print('v.1.0.3', 5, height - 40)
 end
 
 function love.keypressed(k)

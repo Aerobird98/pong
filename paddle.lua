@@ -14,14 +14,14 @@ end
 
 -- For moving the paddle
 function paddle:move(dt)
-  for i,v in ipairs(paddle) do
+  for i = 1, #paddle do
     -- Get the paddle y coords, add the corresponding velocity and multiply it with delta time,
     -- this is necessary to move the paddle,
     -- then we will need to add a value to the velocity.
-    v.y = v.y + self.yvel * dt
+    paddle[i].y = paddle[i].y + self.yvel * dt
 
     -- Move left-paddle with the w & s keys in the y-axis
-    if v.id == 1 then
+    if paddle[i].id == 1 then
       if love.keyboard.isDown('w') then
         -- add value to the y-velocity ('-' is up)
         self.yvel = -self.yvelValue
@@ -34,7 +34,7 @@ function paddle:move(dt)
     end
 
     -- Move right-paddle with the up & down keys in the y-axis
-    if v.id == 2 then
+    if paddle[i].id == 2 then
       if love.keyboard.isDown('up') then
         -- add value to the y-velocity ('-' is up)
         self.yvel = -self.yvelValue
@@ -51,18 +51,18 @@ function paddle:move(dt)
     for i, id in ipairs(touches) do
     local x,y = love.touch.getPosition(id)
       -- Move the left-paddle
-      if x < width/2 and y < height/2 and v.id == 1 then
+      if x < width/2 and y < height/2 and paddle[i].id == 1 then
         -- add value to the y-velocity ('-' is up)
         self.yvel = -self.yvelValue
-      elseif x < width/2 and y > height/2 and v.id == 1 then
+      elseif x < width/2 and y > height/2 and paddle[i].id == 1 then
         -- add value to the y-velocity ('+' is down)
         self.yvel = self.yvelValue
       end
       -- Move the Right-paddle
-      if x > width/2 and y < height/2 and v.id == 2 then
+      if x > width/2 and y < height/2 and paddle[i].id == 2 then
         -- add value to the y-velocity ('-' is up)
         self.yvel = -self.yvelValue
-      elseif x > width/2 and y > height/2 and v.id == 2 then
+      elseif x > width/2 and y > height/2 and paddle[i].id == 2 then
         -- add value to the y-velocity ('+' is down)
         self.yvel = self.yvelValue
       end
@@ -70,11 +70,11 @@ function paddle:move(dt)
 
     -- For keeping the paddle in wiew
     -- up --
-    if v.y > height - v.b then
-      v.y = height - v.b
+    if paddle[i].y > height - paddle[i].b then
+      paddle[i].y = height - paddle[i].b
     -- down --
-    elseif v.y < 0 then
-      v.y = 0
+    elseif paddle[i].y < 0 then
+      paddle[i].y = 0
     end
   end
 end
@@ -97,9 +97,9 @@ end]]
 
 -- For drawing the paddle
 function paddle:draw()
-  for i,v in ipairs(paddle) do
+  for i = 1, #paddle do
     love.graphics.setColor(0,0,0) -- Black
-    love.graphics.rectangle('fill',v.x,v.y,v.a,v.b)
+    love.graphics.rectangle('fill',paddle[i].x,paddle[i].y,paddle[i].a,paddle[i].b)
   end
 end
 
