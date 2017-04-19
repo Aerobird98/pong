@@ -37,7 +37,7 @@ function ball:bounce(dt)
     ball:reset()
     self.lscore = self.lscore + 1
   end
-    -- up --
+  -- up --
   if self.y < 0 + self.a then
     self.xvel = self.xvel
     self.yvel = -self.yvel

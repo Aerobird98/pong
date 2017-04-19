@@ -5,6 +5,7 @@ function love.load()
   -- Globals
   width = love.graphics.getWidth()
   height = love.graphics.getHeight()
+  pause = true
   dt = 0.02
 
   ball:reset()
@@ -21,9 +22,11 @@ function love.update()
   paddle[2].x = width - 60 -- updtate paddle-right's x position, if resize happens
   ---------------------------------------------------------------------------------
 
-  ball:bounce(dt)
-  paddle:move(dt)
-  --paddle:ai()
+  if not pause then
+    ball:bounce(dt)
+    paddle:move(dt)
+    --paddle:ai()
+  end
 end
 
 function love.draw()
@@ -36,7 +39,12 @@ function love.draw()
   love.graphics.setBackgroundColor(255,255,255) -- White
   love.graphics.setNewFont('Milkshake/Milkshake.ttf',30)
   love.graphics.print(ball.lscore..' :  '..ball.rscore, width/2 - 40, 5)
-  love.graphics.print('v.1.0.3', 5, height - 40)
+  love.graphics.print('v.1.0.4', 5, height - 40)
+
+  if pause then 
+    love.graphics.rectangle('fill',5,5,10,30)
+    love.graphics.rectangle('fill',20,5,10,30)
+  end
 end
 
 function love.keypressed(k)
@@ -44,7 +52,11 @@ function love.keypressed(k)
     love.event.quit()
   elseif k == 'r' then
     ball:reset()
+    paddle:reset()
+    pause = true
     ball.lscore = 0
     ball.rscore = 0
+  elseif k == 'p' or k == 'space' then
+    pause = not pause
   end
 end

@@ -7,6 +7,15 @@ paddle.y = 0
 paddle.yvel = 0
 paddle.yvelValue = 600
 
+function paddle:reset()
+  for i = 1, #paddle do
+    paddle[2].x = width - 60
+    paddle[2].y = height/2 - 120/2
+    paddle[1].x = 40
+    paddle[1].y = height/2 - 120/2
+  end
+end
+
 -- For adding a new paddle, with an 'x' & 'y' coords,'a' width & 'b' height
 function paddle:add(x,y,a,b,id)
   table.insert(paddle,{x = x,y = y,a = a,b = b,id = id})
@@ -83,7 +92,7 @@ end
 --[[ still to smart ;)
 function paddle:ai()
   self.id = 1
-  paddle[self.id].y = ball.y - paddle[self.id].b/2
+  paddle[self.id].y = ball.yvel - paddle[self.id].b/2
 
   -- For keeping the ai in wiew
   -- up --
