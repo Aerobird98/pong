@@ -57,8 +57,8 @@ function paddle:move(dt)
 
     -- Touch input
     local touches = love.touch.getTouches()
-    for i, id in ipairs(touches) do
-    local x,y = love.touch.getPosition(id)
+    for i = 1, #touches do
+    local x,y = love.touch.getPosition(#touches)
       -- Move the left-paddle
       if x < width/2 and y < height/2 and paddle[i].id == 1 then
         -- add value to the y-velocity ('-' is up)
