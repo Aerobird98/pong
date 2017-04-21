@@ -37,9 +37,7 @@ function paddle:move(dt)
       elseif love.keyboard.isDown('s') then
         -- add value to the y-velocity ('+' is down)
         self.yvel = self.yvelValue
-      else
-        self.yvel = 0
-      end
+      else self.yvel = 0 end
     end
 
     -- Move right-paddle with the up & down keys in the y-axis
@@ -50,9 +48,7 @@ function paddle:move(dt)
       elseif love.keyboard.isDown('down') then
         -- add value to the y-velocity ('+' is down)
         self.yvel = self.yvelValue
-      else
-        self.yvel = 0
-      end
+      else self.yvel = 0 end
     end
 
     -- Touch input

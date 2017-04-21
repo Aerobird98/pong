@@ -30,7 +30,7 @@ function love.update()
 end
 
 function love.draw()
-  -- Draw entities...
+  -- Draw entityes...
   paddle:draw()
   ball:draw()
 
@@ -56,7 +56,5 @@ function love.keypressed(k)
     pause = true
     ball.lscore = 0
     ball.rscore = 0
-  elseif k == 'p' or k == 'space' then
-    pause = not pause
-  end
+  elseif k == 'p' or k == 'space' then pause = not pause end
 end
