@@ -25,12 +25,11 @@ function love.update()
   if not pause then
     ball:bounce(dt)
     paddle:move(dt)
-    --paddle:ai()
   end
 end
 
 function love.draw()
-  -- Draw entityes...
+  -- Draw entitys...
   paddle:draw()
   ball:draw()
 
