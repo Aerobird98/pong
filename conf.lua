@@ -1,7 +1,4 @@
 function love.conf(t)
-  -- To make the console output display live in Sublime text
-  io.stdout:setvbuf('no')
-
   -- To display window title
   t.window.title = 'pong - by Aerobird98'
 
