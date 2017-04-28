@@ -1,6 +1,6 @@
 function love.conf(t)
   -- To display window title
-  t.window.title = 'pong - by Aerobird98'
+  t.window.title = 'pong 1.1.0 - by Aerobird98'
 
   t.version = '0.10.2' -- Löve2d version
 
