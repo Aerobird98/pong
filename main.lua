@@ -2,7 +2,6 @@ function love.load()
   require('paddle')
   require('ball')
 
-  -- Globals
   width = love.graphics.getWidth()
   height = love.graphics.getHeight()
   pause = pause
@@ -18,22 +17,19 @@ end
 
 function love.update()
   if not pause then
+    for i = 1, #paddle do ball:col(ball,paddle[i],dt) end
     ball:bounce(ball,paddle,dt)
-    paddle:ctrl(paddle,dt)
+    paddle:move(paddle[1],600,'w','s',dt)
+    paddle:move(paddle[2],600,'up','down',dt)
   end
 end
 
 function love.draw()
-  -- Draw entitys...
   paddle:draw(paddle)
   ball:draw(ball)
 
-  -- Draw other stuff...
-  love.graphics.setColor(0,0,0) -- Black
-  love.graphics.setBackgroundColor(255,255,255) -- White
-  love.graphics.setNewFont('Milkshake/Milkshake.ttf',30)
-  love.graphics.print(lscore..' :  '..rscore, width/2 - 40, 5)
-  love.graphics.print('v.1.1.0', 5, height - 40)
+  love.graphics.setNewFont('Bit/Bit.ttf',30)
+  love.graphics.print(lscore..' : '..rscore, width/2 - 40,10)
 
   if pause then 
     love.graphics.rectangle('fill',5,5,10,30)
