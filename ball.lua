@@ -27,19 +27,26 @@ function ball:bounce(e,f,dt)
   end
 end
 
--- collision check (with paddle)
 function ball:col(e,f,dt)
-  if e.y + e.b/2 > f.y
-    and e.y - e.b/2 < f.y + f.b
-    and e.x - e.a/2 > f.x + f.a
-    and e.x - e.a/2 + e.xvel * dt < f.x + f.a
-    or e.y + e.b/2 > f.y 
-    and e.y - e.b/2 < f.y + f.b
-    and e.x + e.a/2 < f.x
-    and e.x + e.a/2 + e.xvel * dt > f.x then
+  if e.x + e.a/2 > f.x and e.x - e.a/2 < f.x + f.a
+    or e.y + e.b/2 > f.y and e.y - e.b/2 < f.y + f.b then
 
-    e.xvel = -e.xvel
-    e.yvel = e.yvel + math.random(100,160)
+    -- Left col --
+    if e.x - e.a/2 > f.x + f.a
+      and e.x - e.a/2 + e.xvel * dt < f.x + f.a
+      or e.xvel < 0 and e.x - e.a/2 == f.x + f.a then
+
+      e.xvel = -e.xvel
+      e.yvel = e.yvel + math.random(100,160)
+
+    -- Right col --
+    elseif e.x + e.a/2 < f.x
+      and e.x + e.a/2 + e.xvel * dt > f.x
+      or e.xvel > 0 and e.x + e.a/2 == f.x then
+
+      e.xvel = -e.xvel
+      e.yvel = e.yvel + math.random(100,160)
+    end
   end
 end
 
