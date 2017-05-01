@@ -1,7 +1,7 @@
 paddle = {}
 
 function paddle:add(e,x,y,a,b)
-  table.insert(e,{x=x,y=y,a=a,b=b,yvel=0})
+  table.insert(e,{x=x,y=y,a=a,b=b,xvel=0,yvel=0})
 end
 
 function paddle:remove(e)

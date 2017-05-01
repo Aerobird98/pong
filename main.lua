@@ -18,7 +18,7 @@ end
 function love.update()
   if not pause then
     for i = 1, #paddle do ball:col(ball,paddle[i],dt) end
-    ball:bounce(ball,paddle,dt)
+    ball:bounce(ball,dt)
     paddle:move(paddle[1],600,'w','s',dt)
     paddle:move(paddle[2],600,'up','down',dt)
   end

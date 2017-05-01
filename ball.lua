@@ -9,7 +9,7 @@ function ball:reset(e,x,y,a,b)
   e.yvel = 0
 end
 
-function ball:bounce(e,f,dt)
+function ball:bounce(e,dt)
   e.x = e.x + e.xvel * dt
   e.y = e.y + e.yvel * dt
 
