@@ -5,9 +5,9 @@ I created this game in the weekend just for practice, it is written in lua (enti
 Pong is one of the first computer games that ever created, originally developed by Allan Alcorn and released in 1972 by Atari corporations. This simple clone features two paddles and a ball, a player gets score once the opponent misses a ball. The game currently can be played with two human players only.
 
 - Move the `left-paddle` with the `w & s` keys and the `right-paddle` with the `arrow keys(up & down)`,
-- Press `esc` to quit the game,
-- Press `r` to reset the ball and paddles & clear scores,
-- Press `p` or `space` to pause the game.
+- Press `esc` to quit,
+- Press `r` to reset,
+- Press `p` or `space` to pause.
 
 You need [löve2d](https://love2d.org/) version `0.10.2.0` to run or build this project
 

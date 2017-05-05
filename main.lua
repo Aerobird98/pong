@@ -9,7 +9,7 @@ function love.load()
 
   entity:remove(entity.ball)
   entity:remove(entity.paddle)
-  entity:add(entity.ball,width/2,height/2,20,20,460,0,2)              -- ball
+  entity:add(entity.ball,width/2,height/2,20,20,400,200,2)            -- ball
   entity:add(entity.paddle,40,height/2 - 120/2,20,120,0,0,2)          -- left paddle
   entity:add(entity.paddle,width - 60,height/2 - 120/2,20,120,0,0,2)  -- right paddle
 end
