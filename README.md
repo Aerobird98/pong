@@ -1,6 +1,6 @@
 # pong
 
-I created this game in the weekend just for practice, it is written in lua (entirely from scratch) using the **awesome** <a href="https://love2d.org/">löve2d</a> framework.
+I created this game in the weekend just for practice, it is written in lua (entirely from scratch), under 200 lines of code, using the **awesome** <a href="https://love2d.org/">löve2d</a> framework.
 
 Pong is one of the first computer games that ever created, originally developed by Allan Alcorn and released in 1972 by Atari corporations. This simple clone features two paddles and a ball, a player gets score once the opponent misses a ball. The game currently can be played with two human players only.
 

@@ -1,6 +1,6 @@
 function love.conf(t)
   -- To display window title
-  t.window.title = 'pong 1.1.1 - by Aerobird98'
+  t.window.title = 'pong 1.1.2 - by Aerobird98'
 
   t.version = '0.10.2' -- Löve2d version
 
@@ -23,7 +23,7 @@ function love.conf(t)
   t.modules.sound = false
   t.modules.system = false
   t.modules.timer = false
-  t.modules.touch = true
+  t.modules.touch = false
   t.modules.video = false
   t.modules.window = true
   t.modules.thread = false
