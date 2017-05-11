@@ -18,8 +18,8 @@ function love.update()
   if not pause then
     aabb:pong(entity.ball,entity.paddle,dt)
     entity:move_b(entity.ball,dt)
-    entity:move_a(entity.paddle[1],600,'w','s',dt)
-    entity:move_a(entity.paddle[2],600,'up','down',dt)
+    entity:move_a(entity.paddle[1],'w','s',dt)
+    entity:move_a(entity.paddle[2],'up','down',dt)
   end
 end
 
@@ -27,7 +27,7 @@ function love.draw()
   entity:draw_a(entity.ball)
   entity:draw_b(entity.paddle)
 
-  love.graphics.setNewFont('Bit/Bit.ttf',30)
+  love.graphics.setNewFont('bit/bit.ttf',30)
   love.graphics.print(lscore..' : '..rscore, width/2 - 30,10)
 
   if pause then 

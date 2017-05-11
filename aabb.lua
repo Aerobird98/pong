@@ -3,6 +3,7 @@ rscore = 0
 lscore = 0
 
 function aabb:pong(e,f,dt)
+  local load = love.load
   for i = 1, #e do
     for j = 1, #f do
       if e[i].x + e[i].a/2 > f[j].x and e[i].x - e[i].a/2 < f[j].x + f[j].a
@@ -23,8 +24,8 @@ function aabb:pong(e,f,dt)
       end
     end
     -- left & right wall col --
-    if e[i].x < 0 - e[i].a then love.load() rscore = rscore + 1
-    elseif e[i].x > width + e[i].a then love.load() lscore = lscore + 1
+    if e[i].x < 0 - e[i].a then load() rscore = rscore + 1
+    elseif e[i].x > width + e[i].a then load() lscore = lscore + 1
     -- up & down wall col --
     elseif e[i].y < 0 + e[i].a or e[i].y > height - e[i].b then
       e[i].xvel = e[i].xvel
