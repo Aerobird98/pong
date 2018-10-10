@@ -26,7 +26,7 @@ function love.draw()
   entity:draw_a(entity.ball)
   entity:draw_b(entity.paddle)
 
-  love.graphics.setNewFont('bit/bit.ttf',30)
+  love.graphics.setNewFont('Bit/Bit.ttf',30)
   love.graphics.print(lscore..' : '..rscore, width/2 - 30,10)
 
   if pause then 
